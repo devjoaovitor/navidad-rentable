@@ -30,8 +30,12 @@ h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
 .hero p{font-size:clamp(17px,3.6vw,20px);max-width:680px;margin:0 auto;opacity:.95}
 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:620px;margin:26px auto 0}
 .mosaic img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;display:block}
-.btn{display:inline-block;background:var(--gold);color:#2A2320;font:800 19px Nunito;text-decoration:none;padding:17px 32px;border-radius:60px;box-shadow:0 6px 0 #9c7d16;margin-top:26px}
-.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #9c7d16}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#2fbf5f 0%,#1e9a48 100%);color:#fff;font:900 20px Nunito;letter-spacing:.2px;text-decoration:none;padding:18px 34px;border-radius:16px;box-shadow:0 6px 0 #146b32,0 12px 26px rgba(20,107,50,.45);margin-top:26px;text-transform:uppercase;position:relative;animation:pulse 2.2s ease-in-out infinite}
+.btn::after{content:"➜";font-size:22px;transition:transform .2s}
+.btn:hover::after{transform:translateX(4px)}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #146b32,0 6px 14px rgba(20,107,50,.4)}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+@media (prefers-reduced-motion:reduce){.btn{animation:none}}
 .small{font-size:14px;opacity:.9;margin-top:12px}
 section{padding:48px 0}
 .title{font-size:clamp(27px,5vw,38px);text-align:center;line-height:1.15;margin-bottom:10px}
@@ -109,7 +113,7 @@ footer{background:#221b18;color:#b9aea5;text-align:center;font-size:13px;padding
       <h1>Convierte tu cocina en tu <em>entrada de dinero extra</em> esta Navidad</h1>
       <p>31 recetas navideñas que la gente compra en diciembre + una hoja que te dice <b>cuánto cobrar en dólares</b> por cada dulce. Empieza esta semana, con lo que consigues en Walmart o la tienda latina.</p>
       <div class="chips"><span>✓ Tazas y °F</span><span>✓ Precios en dólares</span><span>✓ Guía de venta casera</span></div>
-      <a class="btn" href="#oferta">Quiero empezar a vender — US$ 9.97</a>
+      <a class="btn" href="#oferta">💵 Quiero ganar más dólares</a>
       <div class="small">Tarjeta o PayPal • Garantía de 7 días</div>
     </div>
     <img class="heroimg" src="img/hero.jpg" alt="Dulces navideños caseros empacados para vender">
@@ -159,7 +163,7 @@ footer{background:#221b18;color:#b9aea5;text-align:center;font-size:13px;padding
       <div class="pays">💡 El material se paga con la ganancia de 6 fresas del amor.</div>
       <p style="font-size:12px;color:var(--muted);margin-top:10px">Simulación con los números que tú pones. No es una promesa de ventas: el resultado depende de cuánto produzcas y vendas.</p>
     </div>
-    <div style="text-align:center"><a class="btn" href="#oferta">Quiero mis 31 recetas — US$ 9.97</a></div>
+    <div style="text-align:center"><a class="btn" href="#oferta">💵 Quiero ganar más dólares</a></div>
   </div>
 </section>
 
@@ -209,7 +213,7 @@ footer{background:#221b18;color:#b9aea5;text-align:center;font-size:13px;padding
     <div class="card">
       <h3 class="serif" style="font-size:26px">Navidad Rentable</h3>
       <div style="color:var(--muted);margin:4px 0 10px">31 recetas + 4 bonos</div><div class="pays" style="margin:0 0 12px">Se paga con tu primera tanda</div>
-      <div class="price"><small>US$</small>9.97</div>
+      <div class="price"><small>US$</small>9.97</div><div style="color:var(--muted);font-size:15px;margin-top:6px">Menos de lo que cuesta una caja de polvorones en la panadería — y aquí aprendes a hacerlos y venderlos.</div>
       <ul>
         <li>31 recetas navideñas para vender (PDF)</li>
         <li>Hoja de precios en dólares</li>
@@ -217,7 +221,7 @@ footer{background:#221b18;color:#b9aea5;text-align:center;font-size:13px;padding
         <li>Guía de venta casera (cottage food)</li>
         <li>Calendario, mensajes de venta y menú</li>
       </ul>
-      <a class="btn" href="https://pay.hotmart.com/Y108534152A?checkoutMode=10">Quiero Navidad Rentable</a>
+      <a class="btn" href="https://pay.hotmart.com/Y108534152A?checkoutMode=10">💵 Sí, quiero ganar más dólares</a>
       <div style="font-size:13px;color:var(--muted);margin-top:12px">Tarjeta o PayPal • Acceso inmediato por correo</div>
     </div>
   </div>
@@ -243,7 +247,7 @@ footer{background:#221b18;color:#b9aea5;text-align:center;font-size:13px;padding
       <details><summary>¿Cuánto voy a ganar?</summary><p>Depende de cuánto produzcas, tu precio y tu promoción. El material te da las recetas, el cálculo del precio y las herramientas de venta; el resultado viene de tu trabajo.</p></details>
       <details><summary>¿Y si no me gusta?</summary><p>Tienes 7 días de garantía. Pides el reembolso y te devolvemos el 100%.</p></details>
     </div>
-    <div style="text-align:center"><a class="btn" href="#oferta">Quiero las 31 recetas</a></div>
+    <div style="text-align:center"><a class="btn" href="#oferta">💵 Quiero ganar más dólares</a></div>
   </div>
 </section>
 
